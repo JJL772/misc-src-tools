@@ -1,0 +1,134 @@
+"ExtraDocs"
+{
+	"title" ""
+	
+	"team_info"
+	{
+		"description" "Invoked when the team name changes"
+		"params"
+		{
+			"teamid" "ID of the team"
+			"teamname" "Name of the team"
+		}
+	}
+	
+	"team_score"
+	{
+		"description" "Invoked when the team score changes"
+	}
+	
+	"teamplay_broadcast_audio"
+	{
+		"description" "Emits a sound to everyone on a team"
+	}
+	
+	"gameui_hidden"
+	{
+		"description" "Invoked when the GameUI is hidden"
+	}
+	
+	"items_gifted"
+	{
+		"description" "Invoked when items are gifted to the player"
+		"params"
+		{
+			"player" "Entity used by the player"
+		}
+	}
+	
+	"player_team"
+	{
+		"description" "Invoked when a player changes their team"
+		"params"
+		{
+			"userid"		"user ID on server"
+			"team"			"team id"
+			"oldteam"		"old team id"
+			"disconnect"	"team change because player disconnects"
+			"autoteam"		"true if the player was auto assigned to the team"
+			"silent"		"if true wont print the team join messages"
+			"isbot"			"true if player is a bot"
+		}
+	}
+	
+	"player_class"
+	{
+		"description" "Invoked when a player changed their class"
+	}
+	
+	// 
+	// Start of P2CE-specific mod events
+	//
+	
+	"portal_player_touchedground"
+	{
+		"description" "Player landed on the ground"
+	}
+	
+	"portal_player_ping"
+	{
+		"description" "Player pinged using the coop ping tool"
+		"params"
+		{
+			"ping_x" "world-space X pos of ping"
+			"ping_y" "world-space Y pos of ping"
+			"ping_z" "world-space Z pos of ping"
+		}
+	}
+	
+	"portal_player_portaled"
+	{
+		"description" "Player traveled through a portal"
+		"params"
+		{
+			"userid" "User ID of the player on server"
+			"portal2" "True if this is the second (ORANGE) portal"
+		}
+	}
+	
+	"turret_hit_turret"
+	{
+		"description" "A turret has been knocked over with another turret (used for achievements)"
+	}
+	
+	"security_camera_detached"
+	{
+		"description" "Security camera detached from the wall (used for achievements)"
+	}
+	
+	"challenge_map_complete"
+	{
+		"description" "A challange mode map has been completed"
+	}
+	
+	"advanced_map_complete"
+	{
+		"description" "An advanced map has been completed"
+	}
+	
+	"slowtime"
+	{
+		"description" "The player has used +slowtime to temporarily slow time down"
+	}
+	
+	"portal_enabled"
+	{
+		"description" "Invoked when the player's portal gun has been upgraded to enable a new portal, or both"
+		"params"
+		{
+			"leftportal" "Left portal means BLUE portal, right portal means ORANGE portal"
+		}
+	}
+	
+	"portal_fired"
+	{
+		"description" "Invoked when the player fires a portal"
+		"params"
+		{
+			// What the hell is up their valve's naming conventions? Why not just orange/blue??? 
+			// ive seen "right/leftportal" "isportal2" "primary/secondary" used to refer to which. 
+			// I don't understand why there's no consistent naming conventions! 
+			"leftportal" "Left portal means BLUE portal, right portal means ORANGE portal"
+		}
+	}
+}
